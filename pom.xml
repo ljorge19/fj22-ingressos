@@ -10,13 +10,7 @@
     <packaging>war</packaging>
 
 
-     <!--  restante omitido... -->
-      <developers>
-        <developer>
-          <name> Leandro Jorge </name>
-          <email> leandro.jorge19@gmail.com </email>
-        </developer>
-       </developers>  
+     
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -149,6 +143,8 @@
         </dependency>
 
     </dependencies>
+    
+    
     <build>
         <finalName>ingresso</finalName>
         <plugins>
@@ -174,6 +170,15 @@
             </plugin>
         </plugins>
     </build>
+    
+    <!--  restante omitido... -->
+      <developers>
+        <developer>
+          <name> Leandro Jorge </name>
+          <email> leandro.jorge19@gmail.com </email>
+        </developer>
+       </developers>  
+   </project>
     
     
     
