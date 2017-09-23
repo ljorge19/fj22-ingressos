@@ -3,12 +3,13 @@ package br.com.caelum.ingresso.model;
 import java.math.BigDecimal;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
+import java.util.List;
+import java.util.Map;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-
 
 @Entity
 public class Sessao {
@@ -20,7 +21,7 @@ public class Sessao {
 	private Sala sala;
 	@ManyToOne
 	private Filme filme;
-	private	BigDecimal	preco;
+	private BigDecimal preco;
 
 	/**
 	 * @deprecated hibernate only
@@ -35,7 +36,9 @@ public class Sessao {
 		this.setPreco(sala.getPreco().add(filme.getPreco()));
 	}
 
-
+	public Map<String, List<Lugar>> getMapaDeLugares() {
+		return sala.getMapaDeLugares();
+	}
 
 	public Sala getSala() {
 		return sala;
@@ -80,7 +83,5 @@ public class Sessao {
 	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
 	}
-	
-	
 
 }
