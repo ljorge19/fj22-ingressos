@@ -32,7 +32,7 @@ public class SessaoDao {
 	}
 
 	public Sessao findOne(Integer id) {
-		return manager.createQuery("select distinct(s) from Sessao wherer s.id = :id", Sessao.class).setParameter("ïd", Sessao.class).getSingleResult();
+		return manager.createQuery("select distinct(s) from Sessao s where s.id = :id",Sessao.class).setParameter("id",id).getSingleResult();
 				
 	}
 }
