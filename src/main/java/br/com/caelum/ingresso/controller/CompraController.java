@@ -49,6 +49,7 @@ public class CompraController {
 		ModelAndView modelAndView = new ModelAndView("redirect:/");
 		if (cartao.isValido()) {
 			compraDao.save(carrinho.toCompra());
+			carrinho.clear();
 		} else {
 			result.rejectValue("vencimento", "Vencimento	inválido");
 			return checkout(cartao);

@@ -28,6 +28,19 @@ public class Carrinho	{
 	public	Compra	toCompra(){
 		return		new	Compra(ingressos);
 }
+
+	public List<Ingresso> getIngressos() {
+		return ingressos;
+	}
+
+	public void setIngressos(List<Ingresso> ingressos) {
+		this.ingressos = ingressos;
+	}
+	
+	
+	public void clear() {
+		ingressos.clear();
+	}
 	
 	
 	
